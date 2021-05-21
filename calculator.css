@@ -1,0 +1,165 @@
+html{
+font-family: 'Roboto', sans-serif;
+font-size: 150%;
+font-weight: 300;
+line-height: 1.4;
+}
+
+body{
+background:url(/Wallpapers/pexels-aleksandar-pasaric-1323712.jpg) no-repeat;
+background-size: 1370px 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+h2{
+
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 6px;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 5px;
+}
+
+.svg{
+width: 55px;
+height: 35px;
+
+}
+/*.container{
+    height: 80%;
+    width: 70%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    }*/
+
+.calculator{
+box-shadow: 2px 3px 8px 2px rgba(156, 156, 156, 0.651);
+width: 14.25rem;
+margin: auto;
+border-radius: 8px;
+overflow: hidden;
+margin-top: 40px;
+}
+
+.calculator_display{
+    background-color: rgb(16, 16, 17);
+    color: rgb(245, 245, 245);
+    padding: 0.75rem 1.2rem;
+    text-align: right;
+
+}
+.calculator_keys{
+
+    background: rgb(95, 95, 95);
+    display: grid;
+    text-decoration: none;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4,auto);
+    grid-template-areas: 
+    ". . . ."
+    "seven eight nine equals"
+    "four five six equals"
+    "one two three equals"
+    "dot zero clear equals";
+}
+
+.calculator_keys > button{
+border: none;
+
+}
+
+.one{
+    grid-area: one;
+}
+.two
+{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+.four{
+    grid-area: four;
+}
+.five{
+    grid-area: five;
+}
+.six{
+    grid-area: six;
+}
+.seven{
+    grid-area: seven;
+}
+.eight{
+    grid-area: eight;
+}
+.nine{
+    grid-area: nine;
+}
+.zero{
+    grid-area: zero;
+}
+.dot{
+    grid-area: dot;
+}
+.clear{
+    grid-area: clear;
+}
+
+[data-type="number"]{
+text-decoration: none;
+background: rgb(240, 240, 240);
+box-shadow: none;
+padding: 23px 20px;
+border:none;
+font-family: 'Roboto', sans-serif;
+font-weight: 600;
+}
+[data-type="number"]:active{
+    background-color: rgb(255, 207, 163);
+}
+.equals{
+    grid-area: equals;
+    border: none;
+    background-color: rgb(25, 107, 201);
+} 
+.equals:hover,.equals:focus{
+    background-color: rgb(21, 93, 187);
+}
+[data-type="operator"]{
+text-decoration: none;
+box-shadow: none;
+padding: 23px 20px;
+border:none;
+font-family: 'Roboto', sans-serif;
+font-weight: 600;
+background-color: rgb(155, 163, 179);
+}
+[data-type="operator"]:active{
+    background-color: rgb(241, 241, 241);
+}
+
+@media (max-width:600px){
+.calculator_keys{
+    grid-template-columns: repeat(3,auto);
+    grid-template-areas: 
+    "seven eight nine"
+    "four five six"
+    "one two three"
+    "dot zero divide"
+    ". . ."
+    "clear equals equals"
+}
+.dot{background-color: #bbbbbb;}
+
+.divide{
+    grid-area: divide;
+}
+
+}
+[data-state='selected']{
+    background-color: #ffdece;
+}
